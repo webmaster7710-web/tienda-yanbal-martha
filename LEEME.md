@@ -1,9 +1,15 @@
 # Tienda Yanbal con Martha Balderas Solís — página web
 
 ## Dirección en internet
-**https://webmaster7710-web.github.io/tienda-yanbal-martha/**
+- **Cloudflare Pages (principal): https://tienda-yanbal-martha.pages.dev/**
+- GitHub Pages (copia): https://webmaster7710-web.github.io/tienda-yanbal-martha/
 
-Está publicada gratis con GitHub Pages (repositorio `webmaster7710-web/tienda-yanbal-martha`).
+## Actualizar en Cloudflare
+En una terminal dentro de esta carpeta (la primera vez pide iniciar sesión en Cloudflare):
+
+```bash
+npx wrangler pages deploy . --project-name tienda-yanbal-martha --branch main
+```
 
 ## Cómo actualizarla
 Después de cambiar archivos en esta carpeta, en una terminal dentro de la carpeta:
