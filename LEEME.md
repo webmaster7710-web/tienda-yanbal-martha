@@ -1,11 +1,20 @@
 # Tienda Yanbal con Martha Balderas Solís — página web
 
-## Cómo verla
-Abre `index.html` con doble clic, o súbela a internet gratis:
+## Dirección en internet
+**https://webmaster7710-web.github.io/tienda-yanbal-martha/**
 
-1. Entra a https://app.netlify.com/drop
-2. Arrastra **toda esta carpeta** a la página.
-3. Te da un enlace para compartir por WhatsApp, Facebook, etc.
+Está publicada gratis con GitHub Pages (repositorio `webmaster7710-web/tienda-yanbal-martha`).
+
+## Cómo actualizarla
+Después de cambiar archivos en esta carpeta, en una terminal dentro de la carpeta:
+
+```bash
+git add -A
+git commit -m "Actualizo la tienda"
+git push
+```
+
+En 1 o 2 minutos los cambios aparecen en la dirección de arriba.
 
 ## Qué incluye
 - Portada con la foto de Martha, su frase y botones animados.
