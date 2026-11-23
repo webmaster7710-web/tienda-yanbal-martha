@@ -1,0 +1,72 @@
+/* =========================================================
+   COMPRAR POR CATEGORÍA
+   ========================================================= */
+.cat-search{max-width:720px;margin:0 auto 2.6rem;text-align:center}
+.cat-search__box{max-width:none;margin:0 0 1rem;padding:.35rem 1.3rem}
+.cat-search__box input{font-size:1rem;padding:.85rem 0}
+.cat-search__suggest{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;align-items:center;font-size:.85rem}
+.cat-search__suggest span{color:var(--muted);margin-right:.2rem}
+.cat-search__suggest button{padding:.35em .95em;border-radius:999px;background:rgba(255,255,255,.06);border:1px dashed rgba(255,158,196,.45);color:var(--rose);transition:.3s var(--bounce)}
+.cat-search__suggest button:hover{background:var(--grad);color:var(--bg);border-color:transparent;transform:translateY(-3px)}
+.cat-search__msg{margin-top:.9rem;min-height:1.4em;color:var(--muted);font-size:.9rem}
+.cat-search__msg b{color:var(--peach)}
+
+/* Tarjetas de categoría */
+.cat-tiles{display:grid;grid-template-columns:repeat(8,1fr);gap:1rem;margin-bottom:3rem}
+.cat-tile{position:relative;display:flex;flex-direction:column;align-items:center;gap:.25rem;padding:1.3rem .6rem 1.1rem;border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1px solid var(--line);backdrop-filter:blur(10px);text-align:center;transition:transform .4s var(--bounce),border-color .3s,box-shadow .3s,background .3s;overflow:hidden}
+.cat-tile::before{content:"";position:absolute;inset:auto -30% -60% -30%;height:80%;background:radial-gradient(circle,rgba(255,158,196,.35),transparent 70%);opacity:0;transition:opacity .4s}
+.cat-tile:hover{transform:translateY(-8px);border-color:rgba(255,158,196,.6)}
+.cat-tile:hover::before,.cat-tile.is-active::before{opacity:1}
+.cat-tile.is-active{border-color:transparent;background:linear-gradient(160deg,rgba(255,111,156,.35),rgba(177,75,214,.3));box-shadow:0 0 0 2px var(--rose),0 18px 40px rgba(255,111,156,.3)}
+.cat-tile__icon{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:var(--grad);box-shadow:0 10px 22px rgba(255,111,156,.35);margin-bottom:.5rem;transition:transform .6s var(--bounce);position:relative}
+.cat-tile:hover .cat-tile__icon,.cat-tile.is-active .cat-tile__icon{transform:rotate(-8deg) scale(1.1)}
+.cat-tile.is-active .cat-tile__icon{animation:float 3s ease-in-out infinite}
+.cat-tile__icon svg{width:28px;height:28px;fill:none;stroke:var(--bg);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cat-tile strong{font-size:.88rem;line-height:1.2;position:relative}
+.cat-tile small{font-size:.72rem;color:var(--muted);position:relative}
+
+/* Panel de resultados */
+.cat-panel{scroll-margin-top:90px;padding:1.6rem;border-radius:28px;background:rgba(20,6,24,.35);border:1px solid var(--line);backdrop-filter:blur(8px)}
+.cat-panel__head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+.cat-panel__head h3{font-family:var(--serif);font-size:clamp(1.6rem,3.5vw,2.2rem);line-height:1.1}
+.cat-panel__head p{color:var(--muted);font-size:.9rem}
+.cat-sort{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--muted)}
+.cat-sort select{font:inherit;color:var(--text);background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:999px;padding:.5rem 1rem;outline:0;cursor:pointer}
+.cat-sort select option{background:#2a1030}
+.cat-brands{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.cat-brands .chip{font-size:.82rem;padding:.4em 1.1em}
+
+/* Tarjetas de página */
+.page-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1.2rem}
+.page-card{display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:var(--surface);border:1px solid var(--line);transition:transform .4s var(--bounce),box-shadow .4s,border-color .4s;animation:cardin .6s var(--bounce) backwards}
+@keyframes cardin{from{opacity:0;transform:translateY(30px) scale(.94)}}
+.page-card:hover{transform:translateY(-6px);border-color:rgba(255,158,196,.55);box-shadow:0 20px 40px rgba(0,0,0,.4),0 0 24px rgba(255,158,196,.25)}
+.page-card__img{position:relative;display:block;width:100%;aspect-ratio:3/4.1;overflow:hidden;background:var(--bg-2);cursor:zoom-in}
+.page-card__img img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.page-card:hover .page-card__img img{transform:scale(1.08)}
+.page-card__brand{position:absolute;top:10px;left:10px;font-size:.7rem;font-weight:700;padding:.3em .8em;border-radius:999px;color:#fff;letter-spacing:.04em;box-shadow:0 4px 12px rgba(0,0,0,.35)}
+.brand--yanbal{background:linear-gradient(135deg,#c79a3c,#8a6420)}
+.brand--esika{background:linear-gradient(135deg,#e2234b,#9b0f2e)}
+.brand--lbel{background:linear-gradient(135deg,#3b3b3b,#111)}
+.brand--cyzone{background:linear-gradient(135deg,#ff3fa4,#a1187a)}
+.brand--black-friday{background:linear-gradient(135deg,#ff5a1f,#b3260a)}
+.page-card__zoom{position:absolute;inset:auto 10px 10px 10px;text-align:center;font-size:.78rem;font-weight:600;padding:.45em;border-radius:999px;background:rgba(42,16,48,.8);backdrop-filter:blur(6px);opacity:0;transform:translateY(10px);transition:.35s var(--bounce)}
+.page-card:hover .page-card__zoom{opacity:1;transform:none}
+.page-card__body{padding:.8rem;display:flex;flex-direction:column;gap:.6rem}
+.page-card__meta{display:flex;justify-content:space-between;align-items:baseline;gap:.4rem;font-size:.78rem;color:var(--muted);flex-wrap:wrap}
+.page-card__meta b{color:var(--peach);font-size:.95rem}
+.page-card__meta em{font-style:normal;color:var(--lavender)}
+.page-card__add{padding:.6em .8em;font-size:.8rem;width:100%}
+.cat-more{text-align:center;margin-top:1.8rem}
+.cat-more [hidden]{display:none}
+#catMore[hidden]{display:none}
+
+@media (max-width:1100px){.cat-tiles{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:560px){
+  .cat-tiles{grid-template-columns:repeat(2,1fr);gap:.7rem}
+  .cat-tile{padding:1rem .5rem .9rem}
+  .cat-panel{padding:1rem;border-radius:20px}
+  .page-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}
+  .page-card__add{font-size:.72rem;padding:.55em .4em}
+  .page-card__zoom{opacity:1;transform:none;font-size:.7rem}
+}

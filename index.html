@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tienda Yanbal con Martha Balderas Solís</title>
+<meta name="description" content="Catálogos Yanbal, Ésika, L'Bel, Cyzone y Black Friday. Pide por WhatsApp con Martha Balderas Solís en Villa Serrano, Bolivia.">
+<meta name="theme-color" content="#2a1030">
+<link rel="icon" href="img/martha-avatar.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/como-pedir.css">
+<link rel="stylesheet" href="css/categorias.css">
+</head>
+<body>
+<div class="bg-fx" aria-hidden="true"><span class="blob blob--1"></span><span class="blob blob--2"></span><span class="blob blob--3"></span><span class="blob blob--4"></span></div>
+<canvas id="sparkles" aria-hidden="true"></canvas>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ ENCABEZADO ============ -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a href="#inicio" class="brand">
+      <img src="img/martha-avatar.webp" alt="" class="brand__avatar">
+      <span class="brand__text">
+        <strong>Tienda Yanbal</strong>
+        <small>con Martha Balderas Solís</small>
+      </span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogos">Catálogos</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#como-pedir">Cómo pedir</a>
+      <a href="#nosotros">Sobre Martha</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn cart-btn" id="openCart" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <span class="pill reveal">Campaña Navidad 2026 · ¡pedidos abiertos!</span>
+      <h1><span class="word" style="animation-delay:.1s">Tienda</span> <span class="word shine-text" style="animation-delay:.3s">Yanbal</span><br><em><span class="word" style="animation-delay:.55s">con</span> <span class="word" style="animation-delay:.7s">Martha</span> <span class="word" style="animation-delay:.85s">Balderas</span> <span class="word" style="animation-delay:1s">Solís</span></em></h1>
+      <p class="hero__typed reveal">Encuentra aquí <b id="typed">perfumes</b></p>
+      <p class="hero__quote reveal">“Disciplina, enfoque y corazón me llevan a cumplir mis sueños.”</p>
+      <p class="hero__lead reveal">Perfumes, maquillaje, cuidado personal, joyas y calzado. Mira los catálogos, arma tu pedido y envíalo por WhatsApp. ¡Luego pasas a recogerlo a mi tienda en Villa Serrano! También hago envíos por flota a otros departamentos y provincias (consulta por mensaje).</p>
+      <div class="hero__cta reveal">
+        <a href="#catalogos" class="btn btn--primary">Ver catálogos</a>
+        <a href="#" class="btn btn--wa js-wa">
+          <svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7a10.7 10.7 0 0 1-5.5-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.9.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/></svg>
+          Escríbeme
+        </a>
+      </div>
+      <ul class="hero__facts reveal">
+        <li><b data-count="5">0</b> catálogos</li>
+        <li><b data-count="612">0</b> páginas</li>
+        <li><b data-count="55" data-suffix="%">0</b> dscto. máx.</li>
+      </ul>
+    </div>
+    <div class="hero__photo reveal zoom" id="heroPhoto">
+      <div class="hero__ring"></div>
+      <span class="orbit orbit--1">💄</span>
+      <span class="orbit orbit--2">🌸</span>
+      <span class="orbit orbit--3">🎁</span>
+      <img src="img/martha.webp" alt="Martha Balderas Solís, dueña de la tienda" width="800" height="1008">
+      <div class="hero__badge">
+        <img src="img/martha-avatar.webp" alt="">
+        <div><strong>Martha Balderas</strong><small>Dueña de la tienda</small></div>
+      </div>
+    </div>
+  </div>
+  <a href="#catalogos" class="scroll-hint" aria-label="Bajar"><span></span></a>
+</section>
+
+<!-- ============ MARCAS (cinta) ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>YANBAL</span><i>✦</i><span>ÉSIKA</span><i>✦</i><span>L'BEL</span><i>✦</i><span>CYZONE</span><i>✦</i><span>BLACK FRIDAY</span><i>✦</i>
+    <span>YANBAL</span><i>✦</i><span>ÉSIKA</span><i>✦</i><span>L'BEL</span><i>✦</i><span>CYZONE</span><i>✦</i><span>BLACK FRIDAY</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============ CATÁLOGOS ============ -->
+<section class="section" id="catalogos">
+  <div class="container">
+    <header class="section__head reveal">
+      <span class="eyebrow">Catálogos digitales</span>
+      <h2>Hojea el catálogo y pide lo que te guste</h2>
+      <p>Toca un catálogo para abrirlo. En cada página puedes agregar productos a tu pedido con su código.</p>
+    </header>
+    <div class="filters reveal" id="catFilters">
+      <button class="chip is-active" data-filter="all">Todos</button>
+      <button class="chip" data-filter="belleza">Belleza</button>
+      <button class="chip" data-filter="calzado">Calzado</button>
+    </div>
+    <div class="catalog-grid" id="catalogGrid"></div>
+  </div>
+</section>
+
+<!-- ============ COMPRAR POR CATEGORÍA ============ -->
+<section class="section" id="categorias">
+  <div class="container">
+    <header class="section__head reveal">
+      <span class="eyebrow">Compra por categoría</span>
+      <h2>¿Qué estás buscando hoy?</h2>
+      <p>Todos los catálogos mezclados y ordenados por tipo de producto. Elige una categoría o escribe lo que buscas.</p>
+    </header>
+
+    <div class="cat-search reveal">
+      <div class="search cat-search__box">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="catSearch" placeholder="Escribe: labial, crema, perfume, aretes, zapatos…" autocomplete="off">
+      </div>
+      <div class="cat-search__suggest" id="catSuggest">
+        <span>Prueba:</span>
+        <button data-q="labial">labial</button>
+        <button data-q="crema facial">crema facial</button>
+        <button data-q="protector solar">protector solar</button>
+        <button data-q="perfume">perfume</button>
+        <button data-q="shampoo">shampoo</button>
+        <button data-q="aretes">aretes</button>
+        <button data-q="bolsos">bolsos</button>
+        <button data-q="zapatos">zapatos</button>
+      </div>
+      <p class="cat-search__msg" id="catSearchMsg" aria-live="polite"></p>
+    </div>
+
+    <div class="cat-tiles" id="catTiles"></div>
+
+    <div class="cat-panel" id="catPanel">
+      <div class="cat-panel__head">
+        <div>
+          <h3 id="catTitle">Maquillaje</h3>
+          <p id="catHint"></p>
+        </div>
+        <label class="cat-sort">
+          <span>Ordenar</span>
+          <select id="catSort">
+            <option value="mixed">Mezclado</option>
+            <option value="price">Precio: menor a mayor</option>
+            <option value="catalog">Por catálogo</option>
+          </select>
+        </label>
+      </div>
+      <div class="cat-brands" id="catBrands"></div>
+      <div class="page-grid" id="catResults"></div>
+      <div class="cat-more"><button class="btn btn--ghost" id="catMore">Ver más</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFERTAS ============ -->
+<section class="section section--soft" id="ofertas">
+  <div class="container">
+    <header class="section__head reveal">
+      <span class="eyebrow">Ofertas Yanbal · Campaña 13</span>
+      <h2>Regalos de Navidad destacados</h2>
+      <p>Precios del catálogo Yanbal Bolivia. Agrégalos al carrito con un toque.</p>
+    </header>
+    <div class="countdown reveal zoom" id="countdown">
+      <p class="countdown__label">🎄 Faltan para Navidad — ¡pide tus regalos a tiempo!</p>
+      <div class="countdown__box"><b data-u="d">00</b><small>Días</small></div>
+      <div class="countdown__box"><b data-u="h">00</b><small>Horas</small></div>
+      <div class="countdown__box"><b data-u="m">00</b><small>Min</small></div>
+      <div class="countdown__box"><b data-u="s">00</b><small>Seg</small></div>
+    </div>
+    <div class="search reveal">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="productSearch" placeholder="Buscar perfume, set, código…">
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CÓMO PEDIR ============ -->
+<section class="section" id="como-pedir">
+  <div class="container">
+    <header class="section__head reveal">
+      <span class="eyebrow">Fácil y rápido</span>
+      <h2>¿Cómo hago mi pedido?</h2>
+      <p>Cuatro pasos y tu pedido está en camino. Sin registrarte, sin complicaciones.</p>
+    </header>
+
+    <ol class="timeline" id="timeline">
+      <li class="timeline__line" aria-hidden="true"><span id="timelineFill"></span></li>
+
+      <!-- Paso 1 -->
+      <li class="tl-step">
+        <div class="tl-card reveal from-left">
+          <span class="tl-card__big">01</span>
+          <div class="tl-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M2 5.5C4.5 4 8 4 12 6c4-2 7.5-2 10-.5V19c-2.5-1.5-6-1.5-10 .5-4-2-7.5-2-10-.5z"/><path d="M12 6v13.5"/></svg>
+          </div>
+          <h3>Elige tus favoritos</h3>
+          <p>Hojea los catálogos de Yanbal, Ésika, L'Bel, Cyzone y Bata, o mira las ofertas destacadas de la campaña.</p>
+          <a href="#catalogos" class="tl-card__link">Ver catálogos →</a>
+        </div>
+        <span class="tl-node" aria-hidden="true">1</span>
+        <div class="tl-visual reveal from-right" aria-hidden="true">
+          <div class="mock-fan">
+            <img src="catalogos/lbel/thumbs/001.webp" alt="" loading="lazy">
+            <img src="catalogos/esika/thumbs/001.webp" alt="" loading="lazy">
+            <img src="catalogos/yanbal/thumbs/001.webp" alt="" loading="lazy">
+          </div>
+        </div>
+      </li>
+
+      <!-- Paso 2 -->
+      <li class="tl-step tl-step--alt">
+        <div class="tl-card reveal from-right">
+          <span class="tl-card__big">02</span>
+          <div class="tl-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M12 12v5M9.5 14.5h5"/></svg>
+          </div>
+          <h3>Agrega al carrito</h3>
+          <p>Toca “Agregar al carrito” o escribe el código del producto, la cantidad y tu tono o talla.</p>
+        </div>
+        <span class="tl-node" aria-hidden="true">2</span>
+        <div class="tl-visual reveal from-left" aria-hidden="true">
+          <div class="mock-cart">
+            <div class="mock-cart__head"><b>Mi pedido</b><span class="mock-cart__badge">2</span></div>
+            <div class="mock-cart__item"><img src="catalogos/yanbal/thumbs/007.webp" alt="" loading="lazy"><div><b>Ccori Parfum</b><small>CÓD. 231</small></div><em>Bs 405</em></div>
+            <div class="mock-cart__item mock-cart__item--new"><img src="catalogos/yanbal/thumbs/010.webp" alt="" loading="lazy"><div><b>Set Gaïa</b><small>CÓD. 79866</small></div><em>Bs 489</em></div>
+            <div class="mock-cart__total"><span>Total</span><b>Bs 894</b></div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Paso 3 -->
+      <li class="tl-step">
+        <div class="tl-card reveal from-left">
+          <span class="tl-card__big">03</span>
+          <div class="tl-card__icon tl-card__icon--wa">
+            <svg viewBox="0 0 24 24"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.4a8.4 8.4 0 1 1 15.4-4.5z"/><path d="M8.5 9.5c.3 2.6 2.4 4.8 5 5.2l1.3-1.3 2 .8"/></svg>
+          </div>
+          <h3>Envía por WhatsApp</h3>
+          <p>Con un toque, tu pedido completo me llega al WhatsApp con productos, cantidades y total.</p>
+        </div>
+        <span class="tl-node" aria-hidden="true">3</span>
+        <div class="tl-visual reveal from-right" aria-hidden="true">
+          <div class="mock-chat">
+            <div class="mock-chat__head"><img src="img/martha-avatar.webp" alt=""><div><b>Martha Balderas</b><small>en línea</small></div></div>
+            <div class="bubble bubble--me">¡Hola Martha! 🌹 Quiero hacer este pedido: Ccori Parfum x1, Set Gaïa x1</div>
+            <div class="bubble bubble--typing"><i></i><i></i><i></i></div>
+            <div class="bubble bubble--her">¡Hola hijita! Te aviso cuando esté listo para recoger 💕</div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Paso 4 -->
+      <li class="tl-step tl-step--alt">
+        <div class="tl-card reveal from-right">
+          <span class="tl-card__big">04</span>
+          <div class="tl-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9.5 4.5 4h15L21 9.5"/><path d="M3 9.5a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M4.5 12v8.5h15V12"/><path d="M10 20.5v-5h4v5"/></svg>
+          </div>
+          <h3>Recoge o recibe por flota</h3>
+          <p>Te aviso por WhatsApp cuando tu pedido esté listo y pasas a recogerlo a mi tienda: Villa Serrano, calle Héroes del Chaco s/n.</p>
+          <p class="tl-card__ship"><b>¿Vives en otro departamento o provincia?</b> También envío por flota. El costo y la forma de envío se consultan por mensaje.</p>
+          <a href="#contacto" class="tl-card__link">Ver ubicación →</a>
+        </div>
+        <span class="tl-node" aria-hidden="true">4</span>
+        <div class="tl-visual reveal from-left" aria-hidden="true">
+          <div class="mock-delivery">
+            <div class="mock-delivery__ring"><img src="img/martha-avatar.webp" alt=""></div>
+            <div class="mock-delivery__route"><span></span></div>
+            <div class="mock-delivery__done"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>¡Listo para recoger!</div>
+            <small class="mock-delivery__place">🏠 Tienda · Héroes del Chaco s/n</small>
+          </div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="timeline__cta reveal zoom">
+      <a href="#catalogos" class="btn btn--primary">Empezar mi pedido</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE MARTHA ============ -->
+<section class="section section--red" id="nosotros">
+  <div class="container about">
+    <div class="about__photo reveal from-left">
+      <img src="img/martha.webp" alt="Martha Balderas Solís" loading="lazy">
+    </div>
+    <div class="about__text reveal from-right">
+      <span class="eyebrow eyebrow--light">Sobre mí</span>
+      <h2>Hola, soy Martha Balderas Solís</h2>
+      <p>Soy la dueña de esta tienda y yo misma preparo cada pedido. Te asesoro para encontrar el perfume, el maquillaje o el regalo perfecto, con la confianza de las mejores marcas de belleza.</p>
+      <p class="about__quote">Disciplina, enfoque y corazón me llevan a cumplir mis sueños.</p>
+      <ul class="about__list">
+        <li>Atención personalizada por WhatsApp</li>
+        <li>Recoge tu pedido en mi tienda en Villa Serrano</li>
+        <li>Envíos por flota a departamentos y provincias (consultar por mensaje)</li>
+        <li>Catálogos actualizados cada campaña</li>
+      </ul>
+      <a href="#" class="btn btn--light js-wa">Hablar con Martha</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section" id="contacto">
+  <div class="container contact">
+    <div class="contact__info reveal from-left">
+      <span class="eyebrow">Contacto</span>
+      <h2>Visítame o escríbeme</h2>
+      <div class="contact__card">
+        <span class="contact__icon">📍</span>
+        <div><strong>Tienda y punto de recojo</strong><p>Villa Serrano, calle Héroes del Chaco s/n<br>Chuquisaca, Bolivia</p></div>
+      </div>
+      <div class="contact__card">
+        <span class="contact__icon">📱</span>
+        <div><strong>Celular / WhatsApp</strong><p><a href="tel:+59173446090">734 46090</a></p></div>
+      </div>
+      <div class="contact__card">
+        <span class="contact__icon">🚌</span>
+        <div><strong>Envíos por flota</strong><p>Envío a otros departamentos y provincias de Bolivia. Escríbeme por WhatsApp para consultar costo y forma de envío.</p></div>
+      </div>
+      <div class="contact__card">
+        <span class="contact__icon">🛍️</span>
+        <div><strong>Tienda</strong><p>Tienda Yanbal con Martha Balderas Solís</p></div>
+      </div>
+      <div class="contact__btns">
+        <a href="#" class="btn btn--wa js-wa">WhatsApp</a>
+        <a href="tel:+59173446090" class="btn btn--ghost">Llamar</a>
+      </div>
+    </div>
+    <div class="contact__map reveal from-right">
+      <iframe title="Mapa Villa Serrano" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Villa%20Serrano%2C%20Chuquisaca%2C%20Bolivia&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <img src="img/logo-tienda.webp" alt="Tienda Yanbal con Martha Balderas Solís" class="footer__logo">
+    <p>Villa Serrano, calle Héroes del Chaco s/n · Cel. 734 46090</p>
+    <p class="footer__small">Precios y disponibilidad según catálogo vigente. Las marcas pertenecen a sus respectivos dueños. © <span id="year"></span></p>
+  </div>
+</footer>
+
+<!-- ============ BOTÓN WHATSAPP FLOTANTE ============ -->
+<a href="#" class="wa-float js-wa" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7a10.7 10.7 0 0 1-5.5-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.9.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/></svg>
+  <span class="wa-float__tip">¿Te ayudo con tu pedido?</span>
+</a>
+
+<!-- ============ CARRITO ============ -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Carrito de compras">
+  <header class="drawer__head">
+    <h3>Mi pedido</h3>
+    <button class="icon-btn" id="closeCart" aria-label="Cerrar">✕</button>
+  </header>
+  <div class="drawer__body" id="cartItems"></div>
+  <footer class="drawer__foot" id="cartFoot">
+    <div class="cart-total"><span>Total estimado</span><strong id="cartTotal">Bs 0</strong></div>
+    <p class="cart-note" id="cartNote"></p>
+    <label class="field"><span>Tu nombre</span><input id="custName" placeholder="Ej. Ana Pérez" autocomplete="name"></label>
+    <label class="field"><span>Tu celular</span><input id="custAddr" type="tel" placeholder="Ej. 712 34567" autocomplete="tel"></label>
+    <div class="delivery" role="radiogroup" aria-label="Forma de entrega">
+      <label class="delivery__opt"><input type="radio" name="delivery" value="tienda" checked><span><b>🏠 Recojo en tienda</b><small>Villa Serrano, calle Héroes del Chaco s/n</small></span></label>
+      <label class="delivery__opt"><input type="radio" name="delivery" value="flota"><span><b>🚌 Envío por flota</b><small>A otro departamento o provincia</small></span></label>
+    </div>
+    <label class="field" id="shipCityField" hidden><span>¿A qué departamento / provincia y ciudad?</span><input id="shipCity" placeholder="Ej. Sucre, Monteagudo, Santa Cruz…"></label>
+    <p class="cart-pickup" id="deliveryNote">Martha te avisa por WhatsApp cuando tu pedido esté listo para recoger.</p>
+    <button class="btn btn--wa btn--block" id="sendOrder">Enviar pedido por WhatsApp</button>
+    <button class="link-btn" id="clearCart">Vaciar carrito</button>
+  </footer>
+</aside>
+
+<!-- ============ VISOR DE CATÁLOGO ============ -->
+<div class="viewer" id="viewer" aria-hidden="true">
+  <div class="viewer__bar">
+    <button class="icon-btn icon-btn--light" id="viewerClose" aria-label="Cerrar">✕</button>
+    <div class="viewer__title"><strong id="viewerTitle"></strong><small id="viewerPageLabel"></small></div>
+    <div class="viewer__tools">
+      <input type="number" min="1" id="gotoPage" aria-label="Ir a página" placeholder="Pág.">
+      <button class="icon-btn icon-btn--light" id="toggleThumbs" aria-label="Ver miniaturas">▦</button>
+      <button class="icon-btn icon-btn--light cart-btn" id="viewerCart" aria-label="Carrito">
+        <svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+        <span class="cart-count js-count">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="viewer__stage" id="viewerStage">
+    <button class="viewer__nav viewer__nav--prev" id="prevPage" aria-label="Página anterior">‹</button>
+    <div class="viewer__pages" id="viewerPages"></div>
+    <button class="viewer__nav viewer__nav--next" id="nextPage" aria-label="Página siguiente">›</button>
+  </div>
+  <div class="viewer__progress"><span id="viewerProgress"></span></div>
+  <div class="viewer__foot">
+    <button class="btn btn--primary" id="addFromPage">＋ Agregar producto de esta página</button>
+  </div>
+  <div class="thumbs" id="thumbs"></div>
+</div>
+
+<!-- ============ MODAL AGREGAR ============ -->
+<div class="modal" id="addModal" aria-hidden="true">
+  <form class="modal__card" id="addForm">
+    <button type="button" class="icon-btn modal__close" id="addClose" aria-label="Cerrar">✕</button>
+    <img id="addThumb" alt="" class="modal__thumb">
+    <h3>Agregar al pedido</h3>
+    <p class="modal__sub" id="addSub"></p>
+    <label class="field"><span>Producto o código (CÓD.)</span><input id="addName" required placeholder="Ej. Perfume Ccori · CÓD. 231"></label>
+    <div class="field-row">
+      <label class="field"><span>Cantidad</span><input id="addQty" type="number" min="1" value="1" required></label>
+      <label class="field"><span>Precio Bs (opcional)</span><input id="addPrice" type="number" min="0" step="0.5" placeholder="0"></label>
+    </div>
+    <label class="field"><span>Tono, talla o detalle (opcional)</span><input id="addNote" placeholder="Ej. Talla 37, tono rosa"></label>
+    <button class="btn btn--primary btn--block" type="submit">Agregar al carrito</button>
+  </form>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/categorias.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
